@@ -36,7 +36,7 @@
       <div class="project" id="{{id}}">
       	<h5>{{name}}</h5>
         <a href="project/{{name}}" class="thumbnail">
-          <img src="/images/{{image}}" width=75% ... />
+          <img src="images/{{image}}" width=75% ... />
           <p>Details</p>
         </a>
       </div>
