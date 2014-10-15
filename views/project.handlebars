@@ -20,42 +20,23 @@
 	<div class="container">
 		<div class="jumbotron">
   		  <h1>{{projectName}}</h1>
-  			<p>one-sentence description of project</p>
 		</div>
-
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus enim diam, adipiscing sodales sem ut, tristique suscipit odio. Nam mollis ipsum et venenatis euismod. Aliquam erat volutpat. Praesent placerat condimentum tristique. Morbi egestas dapibus viverra. Mauris sit amet dignissim risus, non elementum eros. Donec urna dui, placerat et feugiat non, vulputate in ipsum. Quisque dignissim pulvinar nisi. Quisque feugiat commodo dolor nec suscipit. Donec pretium scelerisque aliquet. Vivamus vitae turpis metus. Sed lobortis vitae orci sed gravida. Donec euismod ipsum sagittis pellentesque pellentesque. Aenean at lorem nec leo consequat tincidunt. Maecenas sit amet felis vel ante dictum suscipit quis nec magna. Sed augue velit, imperdiet quis mi a, porta aliquet urna.</p>
-
-		<p>Phasellus at neque eget sapien elementum sollicitudin. In odio mauris, pulvinar quis turpis sed, faucibus tristique leo. Phasellus a volutpat tortor. Nunc blandit imperdiet iaculis. Nam purus orci, placerat in venenatis ut, ultrices id dolor. Duis ornare erat lectus, at posuere justo mollis eu. Duis dictum feugiat imperdiet. Praesent vitae orci in eros semper lacinia a ut arcu. Cras vitae sapien et erat faucibus imperdiet nec a turpis. Integer at egestas ipsum, sed suscipit eros.</p>
-
-    <div class="row">
-      <div class="col-md-6">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>User</td>
-              <th>Salient need</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Schoolteacher</td>
-              <td>Wants to know what music students are listening to so he can integrate it into his lessons.</td>
-            </tr>
-            <tr>
-              <td>Student 5th grade</td>
-              <td>Desire to be seen as a tastemaker for her friends. Hears about new music from older sister in middle school.</td>
-            </tr>  
-          </tbody>          
-        </table>
+    <h5>Inspiration</h5>
+		<p>This sound visualizer is inspired by two things, the shape of the ribbon used in rhythmic gymnastics and the phenomenal of synesthesia, which means one sense can lead to another. I find the ribbon elegant and aesthetically pleasing, and it resembles the sound wave in nature.</p> 
+    <iframe width="560" height="315" src="//www.youtube.com/embed/CJ2foiGrbcA" frameborder="0" allowfullscreen></iframe>
+    <h5>Description</h5>
+    <p>For the spectrum and waterfall plot,I calculate the peak frequency of each input wave by applying FFT and use it to distinguish notes and find their approximate music scales. If a frequency is close enough to a chromatic scale within the limit defined by the epsilon, the corresponding music scale and the frequency will "pop up" in the center of the screen. The most fun and challenging part is to color the chromatic scale based on this "color of sound" formular found <a href="http://www.flutopedia.com/sound_color.htm">here</a>. Note that although each color corresponds to one scale, I actually use it to represent a range of frequencies separated by the midpoint of two scales so that the plot looks more smooth and continuous. This visualizer also mimics the experience of synesthesia by associating each chromatic scale with a color. I hope you enjoy this visualizer!</p>
+      {{#each projects}}
+       <div class="thumbnail" id="{{id}}">
+          <img src="/images/{{image1}}" width=75%... />
+          <img src="/images/{{image2}}" width=75%... />
       </div>
-      <div class="col-md-6">
-        <img src="http://lorempixel.com/g/520/150/technics" alt="Lorem Pixel image" class="img">
-      </div>
-    </div>
-
-		<p>Sed vitae ultricies magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce pulvinar sapien eget lacus volutpat suscipit. Duis bibendum condimentum sapien, quis vulputate turpis ultricies sit amet. Quisque sollicitudin vitae ipsum vel scelerisque. Aliquam facilisis eros eros, in ultricies erat aliquam nec. Suspendisse nec egestas arcu. Sed nec malesuada turpis. Proin eu lorem sed mauris bibendum consectetur sit amet mattis arcu. Aliquam porta ligula in nulla ullamcorper, at pulvinar diam porta.</p>
-
-    <p><a href="index.html">Back &raquo;</a></p>
+      {{/each}}
+    <h5>Download Code</h5>
+    <a href="https://github.com/jiawen2016/Ribbon-Dance-Sound-Visualizer">https://github.com/jiawen2016/Ribbon-Dance-Sound-Visualizer</a>
+    <h5>Usage</h5>
+    <p>The program is easy to build and use. Just type "make" to build the program and "./RibbonDance" will run the program nonstop until q is pressed to quit.</p>
+    <p><a href="/">Back &raquo;</a></p>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>

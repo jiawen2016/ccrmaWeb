@@ -1,4 +1,3 @@
-lab4
+My personal Web for CCRMA classes
 ====
 
-Lab 4: Programming with Javascript
