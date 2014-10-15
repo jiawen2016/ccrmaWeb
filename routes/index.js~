@@ -12,3 +12,13 @@ exports.view = function(req, res){
       
     ]  
   });
+  res.render('project', {
+    'projects': [
+      { 'name': 'Ribbon Dance Sound Visualizer',
+        'image': 'screenshot2.png',
+        'id': 'project1'
+      },
+      
+    ]  
+  });
+};
