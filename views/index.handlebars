@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>My CCRMA Portfolio</title>	
+	<title>Code for Good</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -23,27 +23,24 @@
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
 		<div class="jumbotron">
-			<h1>Jia Wen Li's CCRMA Portfolio</h1>
-			<p>Hi,I'm a junior majoring in computer science at Stanford. I'm interested in computer music, product design and human-computer interaction.I love playing the pipa & guitar. Some of my other passions are ballet, opera, nostalgic French songs and postcards.q</p>
+			<h1><a href="http://www1.nyc.gov/311/index.page">311</a> Neighborhood Watch </h1>
+			<p>by Team12</p>
 		</div>
 
 	
-		<h4>Projects</h4>
+		
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		{{#each projects}}
+	{{#each boroughs}}
       <div class="project" id="{{id}}">
       	<h5>{{name}}</h5>
-        <a href="project/{{name}}" class="thumbnail">
-          <img src="/images/{{image}}" width=75% ... />
-          <p>Details</p>
+      	<a href="/borough/{{name}}" class="thumbnail">
+      	  <img src="{{image}}" ... width=92%/>
         </a>
-      </div>
-    {{/each}}
-		
+      </div>	       
+    {{/each}}		
 	</div>
-
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 </body>

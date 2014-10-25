@@ -9,11 +9,17 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-var project = require('./routes/project');
+var borough = require('./routes/borough');
+var neighborhood = require('./routes/neighborhood');
+var gen =  require('./routes/gen');
+var mysql =  require('mysql');
 // Example route
 // var user = require('./routes/user');
 
 var app = express();
+//var hostName=“bitnami@ec2-54-225-24-100.compute-1.amazonaws.com”;
+var mysql = require('mysql');
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -22,10 +28,10 @@ app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
+app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
-app.use(express.cookieParser('Intro HCI secret key'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
@@ -37,7 +43,9 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/project/:name', project.viewProject);
+app.get('/borough/:name', borough.viewborough);
+app.get('/gen/:name', gen.viewgen);
+app.get('/neighborhood/:name', neighborhood.viewneighborhood);
 // Example route
 // app.get('/users', user.list);
 

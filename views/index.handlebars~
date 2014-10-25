@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>My CCRMA Portfolio</title>	
+	<title>codeforgood</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
 		<div class="jumbotron">
-			<h1>Jia Wen Li's CCRMA Portfolio</h1>
+			<h1>jfio</h1>
 			<p>Hi,I'm a junior majoring in computer science at Stanford. I'm interested in computer music, product design and human-computer interaction.I love playing the pipa & guitar. Some of my other passions are ballet, opera, nostalgic French songs and postcards.q</p>
 		</div>
 
